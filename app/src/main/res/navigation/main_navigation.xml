@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/addPlayerFragment">
+    <fragment
+        android:id="@+id/addPlayerFragment"
+        android:name="com.example.autobahngame.player.AddPlayerFragment"
+        android:label="AddPlayerFragment"
+        tools:layout="@layout/add_player_fragment">
+        <action
+            android:id="@+id/action_addPlayerFragment_to_mainGameFragment2"
+            app:destination="@id/mainGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainGameFragment"
+        android:name="com.example.autobahngame.maingame.MainGameFragment"
+        android:label="MainGameFragment"
+        tools:layout="@layout/maingame_fragment">
+        <action
+            android:id="@+id/action_mainGameFragment2_to_endGameFragment"
+            app:destination="@id/endGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGameFragment"
+        android:name="com.example.autobahngame.nedgame.EndGameFragment"
+        android:label="EndGameFragment"
+        tools:layout="@layout/endgame_fragment" />
+</navigation>
