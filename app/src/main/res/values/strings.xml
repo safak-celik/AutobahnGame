@@ -3,4 +3,5 @@
     <string name="next">weiter</string>
     <string name="back">zurück</string>
     <string name="add_player_text">Spieler hinzufügen</string>
+    <string name="start_game">Spiel Starten</string>
 </resources>
